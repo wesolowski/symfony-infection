@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}List{% endblock %}
+
+{% block body %}
+
+    <h1>{{ brand.name }}</h1>
+
+    <ul class="car">
+        {% for car in brand.cars %}
+            <li>{{ car.model }} - {{ car.description }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
