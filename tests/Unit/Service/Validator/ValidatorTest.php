@@ -10,8 +10,13 @@ class ValidatorTest extends TestCase
     public function test()
     {
         $validator = new Validator();
-        $validator->isValid([]);
 
-        self::assertNotEmpty('i love BUGS!!');
+        $data =   [
+            "brand" => "Audi",
+            "model" => "A8",
+            "desc" => "dictumst morbi vestibulum"
+        ];
+
+        self::assertTrue($validator->isValid($data));
     }
 }
